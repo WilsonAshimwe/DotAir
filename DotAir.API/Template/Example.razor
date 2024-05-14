@@ -1,0 +1,37 @@
+﻿<style>
+    p {
+        color: red;
+    }
+
+    h3 {
+        color: green;
+    }
+</style>
+<Header></Header>
+
+<h3>Coucou @Age</h3>
+<p>Comment ça va ?</p>
+<h1>Votre commande ref: @Reference est ok !!</h1>
+@if(IsAdmin)
+{
+    <p>Paragraphe pour les admins</p>
+}
+<ul>
+@foreach (var item in Values)
+{
+    <li>@item</li>
+}
+</ul>  
+
+<Footer></Footer>
+
+@code {
+    [Parameter]
+    public string Reference { get; set; }
+    [Parameter]
+    public int Age { get; set; }
+    [Parameter]
+    public bool IsAdmin { get; set; }
+    [Parameter]
+    public int[] Values { get; set; }
+}

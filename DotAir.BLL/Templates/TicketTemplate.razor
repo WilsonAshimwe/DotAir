@@ -1,0 +1,17 @@
+﻿<ul>
+    <li>@DepartureAirport</li>
+    <li>@DepartureDate</li>
+    <li>@ArrivalAirport</li>
+    <li>@ArrivalDate</li>
+</ul>  
+
+@code {
+    [Parameter]
+    public required string DepartureAirport { get; set; }
+    [Parameter]
+    public required string ArrivalAirport { get; set; }
+    [Parameter]
+    public required DateTime DepartureDate { get; set; }
+    [Parameter]
+    public required DateTime ArrivalDate { get; set; }
+}

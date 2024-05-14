@@ -1,0 +1,33 @@
+﻿<h1>Bonjour @Name</h1>
+<div class="message">
+    <p>Votre réservation a destination de @ArrivalAirport a été enregistrée avec succès !!</p>   
+</div>
+<div class="infos">
+    <dl>
+        <dt>Reference</dt>
+        <dd>@Reference</dd>
+        <dt>Aeroport Depart</dt>
+        <dd>@DepartureAirport</dd>
+        <dt>Date Depart</dt>
+        <dd>@DepartureDate</dd>
+        <dt>Aeroport Arrivée</dt>
+        <dd>@ArrivalAirport</dd>
+        <dt>Date Arrivée</dt>
+        <dd>@ArrivalDate</dd>
+    </dl>
+</div> 
+
+@code {
+    [Parameter]
+    public required string Name { get; set; }
+    [Parameter]
+    public required string Reference { get; set; }
+    [Parameter]
+    public required string DepartureAirport { get; set; }
+    [Parameter]
+    public required string ArrivalAirport { get; set; }
+    [Parameter]
+    public required DateTime DepartureDate { get; set; }
+    [Parameter]
+    public required DateTime ArrivalDate { get; set; }
+}
